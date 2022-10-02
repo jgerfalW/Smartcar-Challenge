@@ -1,0 +1,29 @@
+{
+  "name": "smartcarchallenge",
+  "version": "1.0.0",
+  "description": "Smartcar backend coding challenge",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jgerfalW/Smartcar-Challenge.git"
+  },
+  "keywords": [
+    "none"
+  ],
+  "author": "Joe Gerfal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jgerfalW/Smartcar-Challenge/issues"
+  },
+  "homepage": "https://github.com/jgerfalW/Smartcar-Challenge#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
