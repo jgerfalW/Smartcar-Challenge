@@ -1,4 +1,3 @@
-
 /**
  * Brief: This is a utility file is primarily being used to assist with validating or parsing of input 
  * passed to it from smartcar.js.
