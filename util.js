@@ -1,16 +1,33 @@
 
+/**
+ * Brief: This is a utility file is primarily being used to assist with validating or parsing of input 
+ * passed to it from smartcar.js.
+ * 
+ * Author: Joe Gerfal.
+ * 
+ * Date: Oct 2nd, 2022.
+ */
 
+
+/**
+ * Brief: checking if inputs for an API request is of the correct form and
+ * returns validation or relevant params that are ready to be passed to GM API
+ * @param {*} payload 
+ * @returns {*} validation object containg {valid: TRUE|FALSE, reason: "reason of failing validation if false"}
+ */
 exports.validateFields = function(payload){
 
-    debugger
+
     let validation = { valid: true, reason: undefined };
 
+    // Check if payload exists.
     if(payload === undefined){
         validation.valid = false;
         validation.reason = "Vehicle parameters cannot be found.";
         return validation;
     }
 
+    // Check for valid ID input.
     if('id' in payload){
         if(payload.id === undefined && payload.id.length === 0){
             validation.reason = "Vehicle ID cannot be found.";
@@ -22,8 +39,9 @@ exports.validateFields = function(payload){
             validation.valid = false;
             return validation;
         }
-    }
+    } 
     
+    // Check for valid command input and parse command actions.
     if('command' in payload){
         if(payload.command === undefined && payload.command.length === 0){
             validation.reason = "Vehicle action of (START|STOP) cannot be found.";
